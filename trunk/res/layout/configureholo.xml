@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/pattern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dip"
+        android:layout_marginRight="8dip"
+        android:layout_marginTop="8dip"
+        android:inputType="textMultiLine"
+        android:minLines="2" >
+    </EditText>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" >
+
+        <requestFocus>
+        </requestFocus>
+    </Spinner>
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="@string/labelCheckBoxFacebook" />
+
+    <CheckBox
+        android:id="@+id/checkBoxArt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="@string/checkIncludeAlbumArt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" >
+
+        <Button
+            android:id="@+id/okconfig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirmButton" >
+        </Button>
+
+        <Button
+            android:id="@+id/restore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/restoreButton" >
+        </Button>
+    </LinearLayout>
+
+    <SlidingDrawer
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <ImageButton
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/invisible"
+            android:src="@drawable/drawer" >
+        </ImageButton>
+        <!-- <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"> -->
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dip"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btnArtist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Artist" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btnSong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Song" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btnAlbum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Album" >
+                    </Button>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btnAndroid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#Android" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btnPoweramptag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#PowerAMP" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btnnowlistening"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#nowlistening" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btnshuffling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#shufflingto" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btnplaying"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#nowplaying" >
+                    </Button>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+        <!-- </ScrollView> -->
+    </SlidingDrawer>
+
+</LinearLayout>
